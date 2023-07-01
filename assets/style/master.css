@@ -1,0 +1,197 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 99%;
+  min-height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.container > .grid,
+.container .flex {
+  width: 50%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 20px;
+  padding: 10px;
+}
+.grid figure:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.61);
+  opacity: 1;
+  transition: 0.5s;
+}
+.grid figure:nth-of-type(2):hover::after {
+  opacity: 0;
+}
+.grid figure:nth-of-type(3)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.61);
+  opacity: 1;
+  transition: 0.5s;
+}
+.grid figure:nth-of-type(3):hover::after {
+  opacity: 0;
+}
+.grid figure:nth-of-type(4)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.61);
+  opacity: 1;
+  transition: 0.5s;
+}
+.grid figure:nth-of-type(4):hover::after {
+  opacity: 0;
+}
+.grid > figure {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.grid > figure > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s;
+}
+.grid > figure:nth-of-type(1) {
+  grid-area: 1/1/span 2/span 2;
+}
+.grid > figure:nth-of-type(1):hover > img {
+  transform: scale(1.2);
+}
+.grid > figure:nth-of-type(2) {
+  grid-area: 2/3/span 2/span 2;
+}
+.grid > figure:nth-of-type(3) {
+  grid-area: 1/4/span 1/span 1;
+}
+
+.flex {
+  flex-direction: column;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  transition: 0.6s;
+  justify-content: space-between;
+}
+.flex:hover {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 0;
+  border-right: 0;
+}
+.flex > * {
+  margin: 20px;
+}
+.flex > h1 {
+  font-size: 40px;
+}
+.flex > p {
+  font-size: 25px;
+  line-height: 40px;
+}
+.flex > a > .bttn {
+  width: 150px;
+  height: 80px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.884);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.flex > a > .bttn::after {
+  content: "";
+  position: absolute;
+  left: 110%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.362);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.354) 0%, rgba(0, 0, 0, 0.354) 55%, rgba(245, 250, 251, 0.562) 88%);
+  width: 60%;
+  height: 100%;
+  transition: 0.5s;
+  opacity: 0.5;
+}
+.flex > a > .bttn:hover::after {
+  left: -100%;
+}
+
+.others {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  justify-content: space-evenly;
+}
+.others > figure {
+  width: 27%;
+  overflow: hidden;
+  position: relative;
+}
+.others > figure:hover::after {
+  width: 100%;
+  left: 0;
+}
+.others > figure::after {
+  content: "Add To Cart";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 0;
+  height: 60px;
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.484);
+  color: white;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.others > figure:hover > img {
+  transform: scale(1.2);
+}
+.others > figure > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s;
+}
+.others > div {
+  margin-top: 20px;
+  width: 27%;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  text-transform: capitalize;
+}
+.others > div > * {
+  padding: 10px;
+  font-size: 25px;
+}/*# sourceMappingURL=master.css.map */

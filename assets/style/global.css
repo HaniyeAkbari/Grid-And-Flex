@@ -1,0 +1,21 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    font-family: lobster;
+}
+
+@font-face {
+    font-family:lobster ;
+    src: url(../font/Lobster-Regular.ttf);
+}
+body{
+    background-color: rgb(210, 252, 210);
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a{
+    text-decoration: none;
+}
